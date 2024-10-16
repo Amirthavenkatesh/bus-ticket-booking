@@ -1,0 +1,119 @@
+/* BusTicketBooking.css */
+
+body, html {
+    height: 100%; /* Full height for the body and html */
+    margin: 0; /* Remove default margin */
+    font-family: 'Roboto', sans-serif; /* Updated font for a modern look */
+    background-image: url('../assets/busback.png'); /* Set the background image */
+    background-size: cover; /* Cover the entire screen */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
+.blur-background {
+    position: fixed; /* Fixed position to cover the whole viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/busback.png'); /* Set the background image again */
+    background-size: cover; /* Cover the entire screen */
+    background-position: center; /* Center the background image */
+    filter: blur(8px); /* Apply blur effect */
+    z-index: 0; /* Place it behind other elements */
+}
+
+.container {
+    max-width: 600px; /* Max width for the form container */
+    margin: 20px auto; /* Center the container horizontally */
+    padding: 30px; /* Padding inside the container */
+    background-color: rgba(249, 249, 249, 0.95); /* Slight transparency for form background */
+    border-radius: 12px; /* More rounded corners for a softer look */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+    position: relative; /* Position relative for layering */
+    z-index: 1; /* Ensure form is above the background */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 80vh; /* Max height for the container */
+}
+
+h1 {
+    color: #a77baf; /* Updated heading color to a calming blue */
+    text-align: center; /* Center align heading */
+    font-size: 2.8em; /* Increased font size for prominence */
+    margin-bottom: 20px; /* Space below the heading */
+    font-weight: bold; /* Make the heading bold */
+}
+
+.input-group {
+    margin-bottom: 20px; /* More space between input fields */
+}
+
+input, select {
+    width: 100%; /* Full width for input/select fields */
+    padding: 12px; /* Increased padding for inputs for a more spacious feel */
+    margin-top: 5px; /* Space above inputs */
+    border: 2px solid #8b91b1; /* Styled border for inputs */
+    border-radius: 8px; /* More rounded corners */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus */
+    font-size: 1em; /* Increase font size for better readability */
+}
+
+input:focus, select:focus {
+    border-color: #ff4081; /* Change border color on focus for emphasis */
+    box-shadow: 0 0 5px rgba(255, 64, 129, 0.6); /* Subtle glow effect on focus */
+}
+
+button.submit-btn {
+    background: linear-gradient(90deg, #3f51b5, #ff4081); /* Gradient button for a modern look */
+    color: #fff; /* Button text color */
+    padding: 14px; /* Increased padding for a more substantial button */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.2s, background 0.3s, box-shadow 0.3s; /* Animation on hover */
+    display: block; /* Block display to fill space */
+    width: 100%; /* Full width button */
+    font-size: 1.2em; /* Increase button font size */
+    font-weight: bold; /* Make button text bold */
+}
+
+button.submit-btn:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    background: linear-gradient(90deg, #ff4081, #3f51b5); /* Reverse gradient on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.ticket-details {
+    background-color: #fff; /* Ticket details background color */
+    padding: 20px; /* Padding for ticket details */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.ticket-details p {
+    margin: 8px 0; /* Space between paragraphs */
+}
+
+.error {
+    color: rgb(155, 28, 28); /* Error message color */
+    font-weight: bold; /* Bold font for error messages */
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Reduce font size for headings on smaller screens */
+    }
+
+    button.submit-btn {
+        padding: 12px; /* Adjust padding for buttons on smaller screens */
+    }
+
+    input, select {
+        padding: 10px; /* Adjust padding for inputs on smaller screens */
+    }
+}
